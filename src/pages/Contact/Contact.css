@@ -1,0 +1,69 @@
+/* Contact.css */
+.contactContainer {
+    max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
+    margin: 0 auto; /* Centre le conteneur */
+    padding: 40px 20px; /* Espacement */
+    font-family: 'Open Sans', sans-serif; /* Assurez-vous que cette police correspond à votre design global */
+}
+
+.contactContainer h1,
+.contactContainer h2 {
+    color: #333; /* Couleur foncée pour les titres */
+    margin-bottom: 20px; /* Espacement sous les titres */
+}
+
+.contactContainer p {
+    color: #666; /* Couleur de texte standard */
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+    margin-bottom: 20px; /* Espacement sous les paragraphes */
+}
+
+.contactForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm label {
+    margin-top: 10px;
+    margin-bottom: 5px; /* Espacement avant et après chaque label */
+}
+
+.contactForm input[type='text'],
+.contactForm input[type='email'],
+.contactForm textarea {
+    padding: 10px; /* Confort de saisie */
+    margin-bottom: 20px; /* Espacement entre les champs */
+    border: 1px solid #ddd; /* Bordure subtile */
+    border-radius: 5px; /* Bords arrondis pour un look moderne */
+    font-size: 1em; /* Taille de police adéquate */
+}
+
+.contactForm textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%; /* Assure que le textarea prend la pleine largeur du conteneur */
+    height: 200px; /* Ajuste la hauteur pour une meilleure visibilité */
+    resize: vertical; /* Permet à l'utilisateur de redimensionner le textarea verticalement s'il le souhaite */
+}
+
+.contactForm button {
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #0056b3; /* Couleur de fond */
+    color: white; /* Couleur de texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bords arrondis */
+    cursor: pointer; /* Indique que c'est cliquable */
+    font-size: 1em; /* Taille de police adéquate */
+    transition: background-color 0.3s; /* Transition pour effet au survol */
+}
+
+.contactForm button:hover {
+    background-color: #004494; /* Légère variation de couleur au survol */
+}
+
+.directContact p strong {
+    color: #333; /* Assurez-vous que la couleur se démarque */
+}
