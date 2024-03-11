@@ -1,0 +1,44 @@
+/* Header.css */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 100px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0; /* Assurez-vous qu'il n'y ait pas de marge par défaut */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    transition: color 0.3s ease; /* Transition douce pour le survol */
+    font-weight: 400; /* Pour une lisibilité optimale dans le menu */
+}
+
+nav ul li a:hover {
+    color: #0056b3; /* Changement de couleur lors du survol */
+}

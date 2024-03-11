@@ -1,3 +1,4 @@
+// App.js
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 // components
 import Header from './components/Header/Header'
@@ -7,6 +8,8 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Services from './pages/Services/Services'
 import Contact from './pages/Contact/Contact'
+// Reset CSS
+import './App.css'
 
 function App() {
     return (
