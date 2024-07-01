@@ -350,6 +350,10 @@ template {
     display: none;
 }
 
+html {
+    background-color: #a7d2ea;
+}
+
 body {
     margin: 0 auto;
     max-width: 1440px;

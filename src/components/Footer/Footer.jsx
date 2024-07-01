@@ -4,7 +4,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <footer>
-            <p>&copy; {new Date().getFullYear()} MetzTech Assistance. Tous droits réservés.</p>
+            <p>&copy; {new Date().getFullYear()} Metz-Sud Informatique. Tous droits réservés.</p>
         </footer>
     )
 }

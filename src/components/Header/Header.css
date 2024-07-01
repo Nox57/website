@@ -18,24 +18,25 @@
 }
 
 .logo {
-    max-height: 150px;
+    max-height: 200px;
     height: auto;
 }
 
 nav {
-    display: flex;
+    display: block; /* Changez flex en block pour permettre au sous-menu de s'afficher en dessous */
+    position: relative; /* Position relative pour le positionnement absolu du sous-menu */
 }
 
-nav ul {
+nav > ul {
     display: flex;
+    justify-content: center; /* Centre le menu principal horizontalement */
     padding: 0;
-    margin: 0; /* Assurez-vous qu'il n'y ait pas de marge par défaut */
+    margin: 0; /* Enlève les marges par défaut */
     list-style: none; /* Enlève les puces */
 }
 
-nav ul li {
-    margin-left: 20px;
-    padding: 10px 0; /* Ajoute un peu d'espace au-dessus et en dessous des liens */
+nav > ul > li {
+    margin: 0 20px; /* Ajuste l'espacement entre les éléments du menu principal */
 }
 
 nav ul li a {
@@ -50,4 +51,29 @@ nav ul li a:hover,
 nav ul li a:focus {
     color: #0056b3; /* Changement de couleur lors du survol */
     text-decoration: underline; /* Ajoute un soulignement au survol pour une meilleure accessibilité */
+}
+
+.subMenu {
+    position: absolute; /* Positionne absolument le sous-menu par rapport à son parent nav */
+    top: 100%; /* Positionne le sous-menu juste en dessous du menu principal */
+    left: 0; /* Aline le sous-menu à gauche du conteneur nav */
+    width: 100%; /* Le sous-menu prend toute la largeur */
+    display: flex;
+    justify-content: center; /* Centre les éléments du sous-menu */
+    background-color: #f0f0f0; /* Couleur de fond du sous-menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour le sous-menu */
+}
+
+.subMenu li {
+    margin: 0 15px; /* Ajuste l'espacement entre les éléments du sous-menu */
+}
+
+.subMenu li a {
+    color: #0056b3; /* Couleur des liens du sous-menu */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.subMenu li a:hover {
+    color: #003974; /* Couleur au survol */
 }

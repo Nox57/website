@@ -6,6 +6,7 @@ footer {
     margin-top: 30px; /* Espace entre le contenu de la page et le footer */
     border-top: 1px solid #e7e7e7; /* Ajoute une ligne séparatrice subtile */
     color: #6c757d; /* Couleur du texte, peut être ajustée */
+    max-width: inherit;
 }
 
 footer p {
