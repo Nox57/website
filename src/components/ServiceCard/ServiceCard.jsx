@@ -1,6 +1,5 @@
-// ServiceCard.jsx
 import React from 'react'
-import './ServiceCard.jsx'
+import './ServiceCard.css'
 
 const ServiceCard = ({ title, description }) => {
     return (

@@ -1,15 +1,32 @@
 /* ServicesSection.css */
+
 .servicesSection {
-    padding: 40px 20px; /* Espacement autour de la section */
+    padding: 40px 20px;
+    background-color: #e6f0fa;
+    color: #002855;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .servicesSection h2 {
-    color: #333; /* Couleur foncée pour le titre de la section */
-    margin-bottom: 20px; /* Espacement sous le titre de la section */
+    color: #001d3d;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .servicesSection p {
-    margin-bottom: 30px; /* Espacement sous le paragraphe d'introduction */
-    color: #666; /* Couleur plus claire pour le texte */
-    font-size: 1.1em; /* Taille légèrement plus grande pour le texte */
+    margin-bottom: 30px;
+    color: #002855;
+    font-size: 1.1em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.servicesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }

@@ -3,7 +3,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="footer">
             <p>&copy; {new Date().getFullYear()} Metz-Sud Informatique. Tous droits réservés.</p>
         </footer>
     )

@@ -1,16 +1,17 @@
 /* Footer.css */
-footer {
-    background-color: #f8f9fa; /* Couleur de fond légère pour le footer, ajustez selon votre palette de couleurs */
-    text-align: center; /* Centre le texte dans le footer */
-    padding: 20px 0; /* Ajoute un padding vertical pour l'espacement */
-    margin-top: 30px; /* Espace entre le contenu de la page et le footer */
-    border-top: 1px solid #e7e7e7; /* Ajoute une ligne séparatrice subtile */
-    color: #6c757d; /* Couleur du texte, peut être ajustée */
-    max-width: inherit;
+
+.footer {
+    background-color: #004085; /* Dark blue */
+    color: #fff; /* White text */
+    padding: 20px; /* Increased padding for better spacing */
+    text-align: center; /* Centered text */
+    border-top: 2px solid #e0e0e0; /* Light grey top border */
+    font-size: 0.9em; /* Slightly smaller font size */
+    position: relative;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a slight lift effect */
 }
 
-footer p {
-    margin: 0; /* Annule la marge par défaut pour aligner parfaitement le texte */
-    font-size: 0.9rem; /* Taille de la police pour la lisibilité */
-    line-height: 1.6; /* Hauteur de ligne pour améliorer la lisibilité */
+.footer p {
+    margin: 0; /* Remove default margin */
 }

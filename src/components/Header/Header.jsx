@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom' // Importez Link de react-router-dom
+import { Link } from 'react-router-dom'
+import logo from './logo.png'
 import './Header.css'
 
 const Header = () => {
@@ -9,14 +10,29 @@ const Header = () => {
 
     return (
         <header className="header-container">
-            <h1 className="title">Metz-Sud Informatique</h1>
-            LOGO
+            <div className="logo-title">
+                <img src={logo} alt="Metz-Sud Informatique Logo" className="logo" />
+                <h1 className="title">Metz-Sud Informatique</h1>
+            </div>
             <nav>
-                <ul>
+                <ul className="main-menu">
                     <li>
                         <Link to="/">Accueil</Link>
                     </li>
-                    <li onClick={toggleSubMenu}>Nos services</li>
+                    <li className="has-submenu" onClick={toggleSubMenu}>
+                        Nos services
+                        <ul className={`sub-menu ${showSubMenu ? 'show' : ''}`}>
+                            <li>
+                                <Link to="/services/service1">Service 1</Link>
+                            </li>
+                            <li>
+                                <Link to="/services/service2">Service 2</Link>
+                            </li>
+                            <li>
+                                <Link to="/services/service3">Service 3</Link>
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                         <Link to="/contact">Contact</Link>
                     </li>
@@ -24,20 +40,6 @@ const Header = () => {
                         <Link to="/about">À Propos</Link>
                     </li>
                 </ul>
-                {showSubMenu && (
-                    <ul className="subMenu">
-                        <li>
-                            <Link to="/services/service1">Service 1</Link>
-                        </li>
-                        <li>
-                            <Link to="/services/service2">Service 2</Link>
-                        </li>
-                        <li>
-                            <Link to="/services/service3">Service 3</Link>
-                        </li>
-                        {/* Ajoutez d'autres liens de sous-menu ici */}
-                    </ul>
-                )}
             </nav>
         </header>
     )

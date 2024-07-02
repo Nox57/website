@@ -1,0 +1,58 @@
+/* About.css */
+
+.aboutPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.aboutContainer {
+    max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
+    width: 100%;
+    margin: 0 auto; /* Centre le conteneur */
+    padding: 40px 20px; /* Espacement */
+    font-family: 'Open Sans', sans-serif; /* Assurez-vous que cette police correspond à votre design global */
+    background-color: #e6f0fa; /* Fond bleu clair */
+    color: #002855; /* Texte bleu foncé */
+    border-radius: 8px; /* Bords arrondis */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+.aboutContainer h1,
+.aboutContainer h2 {
+    color: #001d3d; /* Couleur foncée pour les titres */
+    margin-bottom: 20px; /* Espacement sous les titres */
+    font-family: 'Roboto', sans-serif;
+}
+
+.aboutContainer p {
+    color: #002855; /* Couleur de texte standard */
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+    margin-bottom: 20px; /* Espacement sous les paragraphes */
+}
+
+.aboutContainer ul {
+    list-style-type: none; /* Retire les puces par défaut */
+    padding: 0;
+}
+
+.aboutContainer ul li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+    padding-left: 20px; /* Ajoute de l'espacement à gauche pour les puces personnalisées */
+    position: relative;
+}
+
+.aboutContainer ul li::before {
+    content: '•'; /* Utilise une puce personnalisée */
+    color: #004085; /* Couleur bleue pour la puce */
+    position: absolute;
+    left: 0;
+    font-size: 1.5em; /* Taille de la puce */
+    line-height: 1em; /* Assure que la puce est centrée verticalement */
+}
+
+.aboutContainer ul li strong {
+    color: #001d3d; /* Assure que le texte en gras se démarque */
+}

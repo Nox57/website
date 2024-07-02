@@ -1,22 +1,31 @@
 /* ServiceCard.css */
+
 .serviceCard {
-    border: 1px solid #ddd; /* Ajoute une bordure subtile */
-    border-radius: 8px; /* Arrondit les coins de la carte */
-    padding: 20px; /* Espacement à l'intérieur de la carte */
-    margin: 10px 0; /* Espacement entre les cartes */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet 3D subtil */
-    transition: box-shadow 0.3s ease; /* Transition douce pour l'ombre */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    background-color: #fff;
+    color: #002855;
+    max-width: 300px;
+    text-align: left;
 }
 
 .serviceCard:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .serviceCard h3 {
-    color: #007bff; /* Couleur principale pour le titre */
-    margin-bottom: 15px; /* Espacement sous le titre */
+    color: #001d3d;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
 }
 
 .serviceCard p {
-    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
 }
