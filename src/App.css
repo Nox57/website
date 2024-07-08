@@ -369,6 +369,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: absolute; /* Ajoutez cette ligne pour le contexte de positionnement */
 }
 
 .main-content {
@@ -378,6 +379,7 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
     border-radius: 8px;
+    overflow: auto; /* Ajoutez cette ligne pour gérer les débordements */
 }
 
 a {
