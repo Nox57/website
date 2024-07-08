@@ -9,6 +9,7 @@ import Services from './pages/Services/Services'
 import Contact from './pages/Contact/Contact'
 import MentionsLegales from './pages/MentionsLegales/MentionsLegales'
 // Global CSS
+import './normalize.css'
 import './App.css'
 
 function App() {
