@@ -75,6 +75,9 @@ nav {
 }
 
 @media (max-width: 930px) {
+    .title {
+        font-size: 1.6em;
+    }
     .menu-toggle {
         display: block;
     }
