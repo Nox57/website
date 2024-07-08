@@ -44,3 +44,74 @@
 .heroLink:hover {
     background: #002855;
 }
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .heroTitle {
+        font-size: 2.2rem;
+    }
+
+    .heroText {
+        font-size: 1.1rem;
+    }
+
+    .heroLink {
+        padding: 0.9rem 1.8rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .heroTitle {
+        font-size: 2rem;
+    }
+
+    .heroText {
+        font-size: 1rem;
+    }
+
+    .heroLink {
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding: 1.5rem;
+        margin: 15px;
+    }
+
+    .heroTitle {
+        font-size: 1.8rem;
+    }
+
+    .heroText {
+        font-size: 0.9rem;
+    }
+
+    .heroLink {
+        padding: 0.7rem 1.4rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .heroSection {
+        padding: 1rem;
+        margin: 10px;
+    }
+
+    .heroTitle {
+        font-size: 1.5rem;
+    }
+
+    .heroText {
+        font-size: 0.8rem;
+    }
+
+    .heroLink {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
