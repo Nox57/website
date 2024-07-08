@@ -5,12 +5,17 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #002855; /* Darker blue background */
-    border-bottom: 2px solid #001d3d; /* Even darker blue border */
+    background-color: #002855;
+    border-bottom: 2px solid #001d3d;
     color: #fff;
-    position: sticky; /* Rend le header sticky */
-    top: 0; /* Positionne le header en haut de la page */
-    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.header-container.scrolled {
+    background-color: rgba(0, 40, 85, 0.8); /* Slightly transparent background */
 }
 
 .logo-title {
@@ -38,6 +43,7 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
+    transition: background-color 0.3s ease; /* Add transition */
 }
 
 .main-menu > li {
@@ -49,6 +55,7 @@ nav {
     font-size: 1em;
     font-weight: 500;
     color: #fff;
+    text-decoration: none;
 }
 
 .main-menu > li > a:hover,
@@ -56,44 +63,46 @@ nav {
     color: #cce7ff;
 }
 
-.has-submenu {
-    cursor: pointer;
-    color: #fff;
-}
-
-.has-submenu:hover,
-.has-submenu:focus {
-    color: #cce7ff;
-}
-
-.sub-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
+/* Responsive styles */
+.menu-toggle {
     display: none;
-    flex-direction: column;
-    background-color: #001d3d;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    padding: 10px 0;
-    list-style: none;
-    width: 200px;
-}
-
-.sub-menu.show {
-    display: flex;
-}
-
-.sub-menu li {
-    margin: 0;
-}
-
-.sub-menu li a {
-    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-size: 2em;
     color: #fff;
-    text-decoration: none;
+    cursor: pointer;
 }
 
-.sub-menu li a:hover {
-    background-color: #002855;
+@media (max-width: 930px) {
+    .menu-toggle {
+        display: block;
+    }
+    .main-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #002855;
+        position: fixed; /* Use fixed positioning */
+        top: 120px; /* Adjust this value to position below the header */
+        right: 0;
+        left: 0; /* Ensure it spans the full width */
+        text-align: right;
+        z-index: 999;
+        padding: 20px;
+        transition: background-color 0.3s ease; /* Add transition */
+    }
+    .main-menu.open {
+        display: flex;
+    }
+    .main-menu.scrolled-menu {
+        background-color: rgba(0, 40, 85, 0.8); /* Slightly transparent background */
+    }
+    .main-menu > li {
+        margin: 0;
+    }
+    .main-menu > li:last-child {
+        border-bottom: none;
+    }
+    .main-menu > li > a {
+        display: block;
+    }
 }

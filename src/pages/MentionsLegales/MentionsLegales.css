@@ -1,0 +1,58 @@
+/* MentionsLegales.css */
+
+.mentions-legales-container {
+    max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 40px 20px; /* Espacement interne */
+    font-family: 'Open Sans', sans-serif; /* Assurez-vous que cette police correspond à votre design global */
+    background-color: #e6f0fa; /* Fond bleu clair */
+    color: #002855; /* Texte bleu foncé */
+    border-radius: 8px; /* Bords arrondis */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    text-align: center; /* Centre le texte */
+}
+
+.mentions-legales-container h1,
+.mentions-legales-container h2 {
+    color: #001d3d; /* Couleur foncée pour les titres */
+    margin-bottom: 20px; /* Espacement sous les titres */
+    font-family: 'Roboto', sans-serif;
+    text-align: center; /* Centre les titres */
+}
+
+.mentions-legales-container p {
+    color: #002855; /* Couleur de texte standard */
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+    margin-bottom: 20px; /* Espacement sous les paragraphes */
+    text-align: center; /* Centre le texte */
+}
+
+.mentions-legales-container section {
+    margin-bottom: 40px; /* Espacement entre les sections */
+}
+
+.mentions-legales-container ul {
+    list-style-type: none; /* Retire les puces par défaut */
+    padding: 0;
+    text-align: center; /* Centre les listes */
+}
+
+.mentions-legales-container ul li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+    padding-left: 20px; /* Ajoute de l'espacement à gauche pour les puces personnalisées */
+    position: relative;
+    display: inline-block; /* Change le comportement de liste pour centrage */
+}
+
+.mentions-legales-container ul li::before {
+    content: '•'; /* Utilise une puce personnalisée */
+    color: #004085; /* Couleur bleue pour la puce */
+    position: absolute;
+    left: -20px;
+    font-size: 1.5em; /* Taille de la puce */
+    line-height: 1em; /* Assure que la puce est centrée verticalement */
+}
+
+.mentions-legales-container ul li strong {
+    color: #001d3d; /* Assure que le texte en gras se démarque */
+}

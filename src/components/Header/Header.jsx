@@ -1,43 +1,64 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from './logo.png'
 import './Header.css'
 
 const Header = () => {
-    const [showSubMenu, setShowSubMenu] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false)
 
-    const toggleSubMenu = () => setShowSubMenu(!showSubMenu)
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true)
+            } else {
+                setIsScrolled(false)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen)
+    }
 
     return (
-        <header className="header-container">
+        <header className={`header-container ${isScrolled ? 'scrolled' : ''}`}>
             <div className="logo-title">
                 <img src={logo} alt="Metz-Sud Informatique Logo" className="logo" />
                 <h1 className="title">Metz-Sud Informatique</h1>
             </div>
             <nav>
-                <ul className="main-menu">
+                <button className="menu-toggle" onClick={toggleMenu}>
+                    ☰
+                </button>
+                <ul
+                    className={`main-menu ${menuOpen ? 'open' : ''} ${isScrolled ? 'scrolled-menu' : ''}`}
+                >
                     <li>
-                        <Link to="/">Accueil</Link>
-                    </li>
-                    <li className="has-submenu" onClick={toggleSubMenu}>
-                        Nos services
-                        <ul className={`sub-menu ${showSubMenu ? 'show' : ''}`}>
-                            <li>
-                                <Link to="/services/service1">Service 1</Link>
-                            </li>
-                            <li>
-                                <Link to="/services/service2">Service 2</Link>
-                            </li>
-                            <li>
-                                <Link to="/services/service3">Service 3</Link>
-                            </li>
-                        </ul>
+                        <Link to="/" onClick={toggleMenu}>
+                            Accueil
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/services" onClick={toggleMenu}>
+                            Nos services
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/about">À Propos</Link>
+                        <Link to="/contact" onClick={toggleMenu}>
+                            Contact
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/a-propos" onClick={toggleMenu}>
+                            À Propos
+                        </Link>
                     </li>
                 </ul>
             </nav>

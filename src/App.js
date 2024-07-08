@@ -7,6 +7,7 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Services from './pages/Services/Services'
 import Contact from './pages/Contact/Contact'
+import MentionsLegales from './pages/MentionsLegales/MentionsLegales'
 // Global CSS
 import './App.css'
 
@@ -18,9 +19,10 @@ function App() {
                 <main className="main-content">
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/about" element={<About />} />
+                        <Route path="/a-propos" element={<About />} />
                         <Route path="/services" element={<Services />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route path="/mentions-legales" element={<MentionsLegales />} />
                     </Routes>
                 </main>
                 <Footer />

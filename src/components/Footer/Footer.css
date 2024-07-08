@@ -1,7 +1,7 @@
 /* Footer.css */
 
 .footer {
-    background-color: #004085; /* Dark blue */
+    background-color: #001d3d; /* Darker blue */
     color: #fff; /* White text */
     padding: 20px; /* Increased padding for better spacing */
     text-align: center; /* Centered text */
@@ -14,4 +14,15 @@
 
 .footer p {
     margin: 0; /* Remove default margin */
+}
+
+.footer-link {
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    margin-top: 10px; /* Space above the link */
+    display: inline-block; /* Ensures margin works */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Underline on hover */
 }
