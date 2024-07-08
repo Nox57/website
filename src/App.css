@@ -356,13 +356,15 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    margin: 0; /* Assurez-vous qu'il n'y a pas de marge */
+    padding: 0; /* Assurez-vous qu'il n'y a pas de padding */
 }
 
 #root {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* Add this line */
+    overflow-x: hidden; /* Gardez ceci pour éviter les débordements horizontaux */
 }
 
 .app-container {
