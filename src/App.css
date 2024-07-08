@@ -352,12 +352,17 @@ template {
 
 html,
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Open Sans', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Add this line */
 }
 
 .app-container {
