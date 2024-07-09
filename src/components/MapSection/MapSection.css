@@ -10,9 +10,21 @@
 }
 
 .mapSection h2 {
+    color: #001d3d;
+    font-family: Roboto, sans-serif;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
 .leaflet-container {
-    z-index: 0 !important; /* Assurez-vous que le conteneur de la carte est bien en dessous du header */
+    z-index: 0 !important;
+}
+
+.mapSection-note {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding: 10px;
 }

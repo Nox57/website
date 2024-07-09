@@ -22,6 +22,11 @@ const MapSection = () => {
                 />
                 <Circle center={center} radius={radius} />
             </MapContainer>
+            <p className="mapSection-note">
+                Si vous êtes en dehors de notre rayon d'intervention, n'hésitez pas à nous
+                contacter. Nous serons ravis de discuter des options possibles pour répondre à vos
+                besoins.
+            </p>
         </section>
     )
 }
