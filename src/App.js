@@ -8,6 +8,7 @@ import About from './pages/About/About'
 import Services from './pages/Services/Services'
 import Contact from './pages/Contact/Contact'
 import MentionsLegales from './pages/MentionsLegales/MentionsLegales'
+import NotFound from './components/NotFound/NotFound'
 // Global CSS
 import './normalize.css'
 import './App.css'
@@ -24,6 +25,7 @@ function App() {
                         <Route path="/services" element={<Services />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/mentions-legales" element={<MentionsLegales />} />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                 </main>
                 <Footer />

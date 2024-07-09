@@ -1,0 +1,26 @@
+/* pages/NotFound/NotFound.css */
+.notfound-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.notfound-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.notfound-container p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.notfound-container a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.notfound-container a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
