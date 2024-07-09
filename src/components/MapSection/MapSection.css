@@ -1,0 +1,15 @@
+/* MapSection.css */
+.mapSection {
+    position: relative;
+    z-index: 1; /* Assurez-vous que ce z-index est moins élevé que celui du header */
+    padding: 20px;
+    text-align: center;
+}
+
+.mapSection h2 {
+    margin-bottom: 20px;
+}
+
+.leaflet-container {
+    z-index: 0 !important; /* Assurez-vous que le conteneur de la carte est bien en dessous du header */
+}
