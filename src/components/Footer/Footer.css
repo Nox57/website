@@ -12,6 +12,12 @@
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a slight lift effect */
 }
 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer p {
     margin: 0; /* Remove default margin */
 }
@@ -25,4 +31,30 @@
 
 .footer-link:hover {
     text-decoration: underline; /* Underline on hover */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; /* Space above the icons */
+}
+
+.social-icons a {
+    color: #fff; /* White color for the icons */
+    font-size: 1.5em; /* Adjust the size as needed */
+    margin: 0 10px; /* Space between the icons */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #cce7ff; /* Light blue color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+    .social-icons a {
+        font-size: 1.2em; /* Smaller size for small screens */
+        margin: 0 5px; /* Reduce space between icons */
+    }
 }
