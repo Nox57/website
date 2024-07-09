@@ -1,5 +1,9 @@
 /* Header.css */
 
+.sticky-header {
+    z-index: 1000 !important;
+}
+
 .header-container {
     display: flex;
     align-items: center;
@@ -9,7 +13,6 @@
     border-bottom: 2px solid #001d3d;
     color: #fff;
     top: 0;
-    z-index: 1000;
     transition: background-color 0.3s ease;
 }
 

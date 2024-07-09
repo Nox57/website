@@ -29,7 +29,7 @@ const Header = () => {
     }
 
     return (
-        <Sticky>
+        <Sticky className="sticky-header">
             <header className={`header-container ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="logo-title">
                     <img src={logo} alt="Metz-Sud Informatique Logo" className="logo" />

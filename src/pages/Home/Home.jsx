@@ -5,11 +5,11 @@ import MapSection from '../../components/MapSection/MapSection'
 
 const Home = () => {
     return (
-        <main>
+        <>
             <HeroSection />
-            <MapSection />
             <ServicesSection />
-        </main>
+            <MapSection />
+        </>
     )
 }
 

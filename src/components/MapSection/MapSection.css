@@ -1,9 +1,12 @@
 /* MapSection.css */
 .mapSection {
-    position: relative;
-    z-index: 1; /* Assurez-vous que ce z-index est moins élevé que celui du header */
-    padding: 20px;
     text-align: center;
+    padding: 2rem;
+    background-color: #e6f0fa;
+    color: #002855;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .mapSection h2 {
