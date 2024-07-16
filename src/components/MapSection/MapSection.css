@@ -11,9 +11,10 @@
 
 .mapSection h2 {
     color: #001d3d;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     margin-bottom: 20px;
+    margin-top: 0px;
 }
 
 .leaflet-container {
@@ -22,9 +23,60 @@
 
 .mapSection-note {
     margin-top: 20px;
-    font-size: 1em;
+    font-size: 1rem;
     color: #333;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     padding: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .mapSection h2 {
+        font-size: 1.8rem;
+    }
+
+    .mapSection-note {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .mapSection h2 {
+        font-size: 1.6rem;
+    }
+
+    .mapSection-note {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mapSection {
+        padding: 1.5rem;
+        margin: 15px;
+    }
+
+    .mapSection h2 {
+        font-size: 1.5rem;
+    }
+
+    .mapSection-note {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .mapSection {
+        padding: 1rem;
+        margin: 10px;
+    }
+
+    .mapSection h2 {
+        font-size: 1.4rem;
+    }
+
+    .mapSection-note {
+        font-size: 0.8rem;
+    }
 }

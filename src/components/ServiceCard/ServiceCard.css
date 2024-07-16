@@ -3,8 +3,8 @@
 .serviceCard {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px 20px;
-    margin: 10px auto; /* Centering the cards */
+    padding: 20px;
+    margin: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     background-color: #fff;
@@ -19,10 +19,10 @@
 
 .serviceCardImage {
     width: 100%;
-    height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Ensures the image covers the area, cropping if necessary */
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
 }
 
 .serviceCard h3 {
@@ -36,4 +36,77 @@
     line-height: 1.6;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .serviceCard {
+        padding: 18px;
+        margin: 8px;
+        max-width: 300px;
+    }
+
+    .serviceCard h3 {
+        font-size: 1.4rem;
+    }
+
+    .serviceCard p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .serviceCard {
+        padding: 16px;
+        margin: 6px;
+        max-width: 280px;
+    }
+
+    .serviceCard h3 {
+        font-size: 1.3rem;
+    }
+
+    .serviceCard p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .serviceCard {
+        padding: 14px;
+        margin: 4px;
+        max-width: 260px;
+    }
+
+    .serviceCardImage {
+        height: 180px;
+    }
+
+    .serviceCard h3 {
+        font-size: 1.2rem;
+    }
+
+    .serviceCard p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .serviceCard {
+        padding: 12px;
+        margin: 2px;
+        max-width: 240px;
+    }
+
+    .serviceCardImage {
+        height: 160px;
+    }
+
+    .serviceCard h3 {
+        font-size: 1.1rem;
+    }
+
+    .serviceCard p {
+        font-size: 0.8rem;
+    }
 }
