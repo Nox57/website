@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import './Contact.css'
 
 const Contact = () => {
@@ -26,6 +27,25 @@ const Contact = () => {
 
     return (
         <div className="contactPage">
+            <Helmet>
+                <title>Contact | Metz-Sud Informatique</title>
+                <meta
+                    name="description"
+                    content="Contactez Metz-Sud Informatique pour des questions ou un devis. Remplissez le formulaire ou utilisez nos informations de contact pour nous joindre directement."
+                />
+                <meta property="og:title" content="Contact | Metz-Sud Informatique" />
+                <meta
+                    property="og:description"
+                    content="Contactez Metz-Sud Informatique pour des questions ou un devis. Remplissez le formulaire ou utilisez nos informations de contact pour nous joindre directement."
+                />
+                <meta property="og:url" content="https://www.metz-sud-informatique.com/contact" />
+                <meta property="og:type" content="website" />
+                {/* <meta
+                    property="og:image"
+                    content="https://www.votre-site.com/path-to-your-image.jpg"
+                /> */}
+                <link rel="canonical" href="https://www.metz-sud-informatique.com/contact" />
+            </Helmet>
             <div className="contactContainer">
                 <h1>Contactez-nous</h1>
                 <p>

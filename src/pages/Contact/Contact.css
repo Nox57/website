@@ -9,28 +9,27 @@
 }
 
 .contactContainer {
-    max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
     width: 100%;
-    margin: 0 auto; /* Centre le conteneur */
-    padding: 40px 20px; /* Espacement */
-    font-family: 'Open Sans', sans-serif; /* Assurez-vous que cette police correspond à votre design global */
-    background-color: #e6f0fa; /* Fond bleu clair */
-    color: #002855; /* Texte bleu foncé */
-    border-radius: 8px; /* Bords arrondis */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e6f0fa;
+    color: #002855;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contactContainer h1,
 .contactContainer h2 {
-    color: #001d3d; /* Couleur foncée pour les titres */
-    margin-bottom: 20px; /* Espacement sous les titres */
+    color: #001d3d;
+    margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
 .contactContainer p {
-    color: #002855; /* Couleur de texte standard */
-    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
-    margin-bottom: 20px; /* Espacement sous les paragraphes */
+    color: #002855;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .contactForm form {
@@ -40,7 +39,7 @@
 
 .contactForm label {
     margin-top: 10px;
-    margin-bottom: 5px; /* Espacement avant et après chaque label */
+    margin-bottom: 5px;
     color: #002855;
     font-size: 1em;
 }
@@ -48,35 +47,117 @@
 .contactForm input[type='text'],
 .contactForm input[type='email'],
 .contactForm textarea {
-    padding: 10px; /* Confort de saisie */
-    margin-bottom: 20px; /* Espacement entre les champs */
-    border: 1px solid #ddd; /* Bordure subtile */
-    border-radius: 5px; /* Bords arrondis pour un look moderne */
-    font-size: 1em; /* Taille de police adéquate */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
     width: 100%;
-    box-sizing: border-box; /* Pour inclure le padding dans la largeur totale */
+    box-sizing: border-box;
 }
 
 .contactForm textarea {
-    height: 200px; /* Ajuste la hauteur pour une meilleure visibilité */
-    resize: vertical; /* Permet à l'utilisateur de redimensionner le textarea verticalement s'il le souhaite */
+    height: 200px;
+    resize: vertical;
 }
 
 .contactForm button {
-    padding: 10px 20px; /* Espacement interne */
-    background-color: #004085; /* Couleur de fond */
-    color: white; /* Couleur de texte */
-    border: none; /* Pas de bordure */
-    border-radius: 5px; /* Bords arrondis */
-    cursor: pointer; /* Indique que c'est cliquable */
-    font-size: 1em; /* Taille de police adéquate */
-    transition: background-color 0.3s; /* Transition pour effet au survol */
+    padding: 10px 20px;
+    background-color: #004085;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
 }
 
 .contactForm button:hover {
-    background-color: #002855; /* Légère variation de couleur au survol */
+    background-color: #002855;
 }
 
 .directContact p strong {
-    color: #001d3d; /* Assurez-vous que la couleur se démarque */
+    color: #001d3d;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .contactContainer {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contactContainer {
+        padding: 25px 15px;
+    }
+
+    .contactContainer h1,
+    .contactContainer h2 {
+        font-size: 1.8rem;
+    }
+
+    .contactForm label {
+        font-size: 0.95em;
+    }
+
+    .contactForm input[type='text'],
+    .contactForm input[type='email'],
+    .contactForm textarea {
+        font-size: 0.95em;
+    }
+
+    .contactForm button {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactContainer {
+        padding: 20px 10px;
+    }
+
+    .contactContainer h1,
+    .contactContainer h2 {
+        font-size: 1.6rem;
+    }
+
+    .contactForm label {
+        font-size: 0.9em;
+    }
+
+    .contactForm input[type='text'],
+    .contactForm input[type='email'],
+    .contactForm textarea {
+        font-size: 0.9em;
+    }
+
+    .contactForm button {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .contactContainer {
+        padding: 15px 5px;
+    }
+
+    .contactContainer h1,
+    .contactContainer h2 {
+        font-size: 1.4rem;
+    }
+
+    .contactForm label {
+        font-size: 0.85em;
+    }
+
+    .contactForm input[type='text'],
+    .contactForm input[type='email'],
+    .contactForm textarea {
+        font-size: 0.85em;
+    }
+
+    .contactForm button {
+        font-size: 0.85em;
+    }
 }

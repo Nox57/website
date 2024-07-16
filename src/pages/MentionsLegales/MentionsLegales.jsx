@@ -1,9 +1,36 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import './MentionsLegales.css'
 
 const MentionsLegales = () => {
     return (
         <div className="mentions-legales-container">
+            <Helmet>
+                <title>Mentions Légales | Metz-Sud Informatique</title>
+                <meta
+                    name="description"
+                    content="Mentions Légales de Metz-Sud Informatique. Découvrez les informations légales concernant l'éditeur du site, l'hébergeur, la propriété intellectuelle, la gestion des données personnelles, et plus encore."
+                />
+                <meta property="og:title" content="Mentions Légales | Metz-Sud Informatique" />
+                <meta
+                    property="og:description"
+                    content="Mentions Légales de Metz-Sud Informatique. Découvrez les informations légales concernant l'éditeur du site, l'hébergeur, la propriété intellectuelle, la gestion des données personnelles, et plus encore."
+                />
+                <meta
+                    property="og:url"
+                    content="https://www.metz-sud-informatique.com/mentions-legales"
+                />
+                <meta property="og:type" content="website" />
+                {/* <meta
+                    property="og:image"
+                    content="https://www.votre-site.com/path-to-your-image.jpg"
+                /> */}
+                <link
+                    rel="canonical"
+                    href="https://www.metz-sud-informatique.com/mentions-legales"
+                />
+            </Helmet>
+
             <h1>Mentions Légales</h1>
 
             <section>
