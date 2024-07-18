@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
+import emailjs from '@emailjs/browser'
 import './Contact.css'
 
 const Contact = () => {
+    const form = useRef()
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
+        user_name: '',
+        user_email: '',
         subject: '',
         message: '',
     })
+    const [messageSent, setMessageSent] = useState(false)
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -20,10 +23,16 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // Ici, vous traiteriez les données du formulaire, par exemple en envoyant un email.
-        console.log(formData)
-        alert('Message envoyé ! Nous vous contacterons bientôt.')
-        // Réinitialiser le formulaire ou gérer l'état de soumission ici.
+        emailjs
+            .sendForm('service_1ejg2vd', 'template_n31vxdo', form.current, 'ZNlia65__OlXd1K0W')
+            .then(
+                (result) => {
+                    setMessageSent(true)
+                },
+                (error) => {
+                    alert('Il y a eu un problème avec votre envoi. Veuillez réessayer.')
+                }
+            )
     }
 
     return (
@@ -32,19 +41,15 @@ const Contact = () => {
                 <title>Contact | Metz-Sud Informatique</title>
                 <meta
                     name="description"
-                    content="Contactez Metz-Sud Informatique pour des questions ou un devis. Remplissez le formulaire ou utilisez nos informations de contact pour nous joindre directement."
+                    content="Contactez Metz-Sud Informatique pour des questions ou un devis personnalisé. Remplissez le formulaire ou utilisez nos coordonnées pour nous contacter directement."
                 />
                 <meta property="og:title" content="Contact | Metz-Sud Informatique" />
                 <meta
                     property="og:description"
-                    content="Contactez Metz-Sud Informatique pour des questions ou un devis. Remplissez le formulaire ou utilisez nos informations de contact pour nous joindre directement."
+                    content="Contactez Metz-Sud Informatique pour des questions ou un devis personnalisé. Remplissez le formulaire ou utilisez nos coordonnées pour nous contacter directement."
                 />
                 <meta property="og:url" content="https://www.metz-sud-informatique.com/contact" />
                 <meta property="og:type" content="website" />
-                {/* <meta
-                    property="og:image"
-                    content="https://www.votre-site.com/path-to-your-image.jpg"
-                /> */}
                 <link rel="canonical" href="https://www.metz-sud-informatique.com/contact" />
             </Helmet>
             <div className="contactContainer">
@@ -56,48 +61,57 @@ const Contact = () => {
                 </p>
                 <p>Nous nous engageons à vous répondre dans les plus brefs délais.</p>
                 <div className="contactForm">
-                    <form onSubmit={handleSubmit}>
-                        <label htmlFor="name">Nom :</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
+                    {messageSent ? (
+                        <p>
+                            <strong>
+                                Merci pour votre message ! Nous vous recontacterons dans les plus
+                                brefs délais.
+                            </strong>
+                        </p>
+                    ) : (
+                        <form ref={form} onSubmit={handleSubmit}>
+                            <label htmlFor="user_name">Nom :</label>
+                            <input
+                                type="text"
+                                id="user_name"
+                                name="user_name"
+                                value={formData.user_name}
+                                onChange={handleChange}
+                                required
+                            />
 
-                        <label htmlFor="email">Email :</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
+                            <label htmlFor="user_email">Email :</label>
+                            <input
+                                type="email"
+                                id="user_email"
+                                name="user_email"
+                                value={formData.user_email}
+                                onChange={handleChange}
+                                required
+                            />
 
-                        <label htmlFor="subject">Sujet :</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            value={formData.subject}
-                            onChange={handleChange}
-                            required
-                        />
+                            <label htmlFor="subject">Sujet :</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                value={formData.subject}
+                                onChange={handleChange}
+                                required
+                            />
 
-                        <label htmlFor="message">Message :</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                        ></textarea>
+                            <label htmlFor="message">Message :</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            ></textarea>
 
-                        <button type="submit">Envoyer</button>
-                    </form>
+                            <button type="submit">Envoyer</button>
+                        </form>
+                    )}
                 </div>
 
                 <div className="directContact">
