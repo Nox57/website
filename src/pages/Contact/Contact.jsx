@@ -6,6 +6,7 @@ const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        subject: '',
         message: '',
     })
 
@@ -26,7 +27,7 @@ const Contact = () => {
     }
 
     return (
-        <div className="contactPage">
+        <>
             <Helmet>
                 <title>Contact | Metz-Sud Informatique</title>
                 <meta
@@ -49,11 +50,11 @@ const Contact = () => {
             <div className="contactContainer">
                 <h1>Contactez-nous</h1>
                 <p>
-                    Vous avez des questions ou souhaitez obtenir un devis ? Remplissez le formulaire
-                    ci-dessous ou utilisez nos informations de contact pour nous joindre
+                    Vous avez des questions ou souhaitez obtenir un devis personnalisé ? Remplissez
+                    le formulaire ci-dessous ou utilisez nos coordonnées pour nous contacter
                     directement.
                 </p>
-
+                <p>Nous nous engageons à vous répondre dans les plus brefs délais.</p>
                 <div className="contactForm">
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="name">Nom :</label>
@@ -72,6 +73,16 @@ const Contact = () => {
                             id="email"
                             name="email"
                             value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+
+                        <label htmlFor="subject">Sujet :</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            value={formData.subject}
                             onChange={handleChange}
                             required
                         />
@@ -97,9 +108,29 @@ const Contact = () => {
                     <p>
                         <strong>Téléphone :</strong> +33 1 23 45 67 89
                     </p>
+                    <p>
+                        <strong>Facebook :</strong>{' '}
+                        <a
+                            href="https://www.facebook.com/votrepage"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Visitez notre page Facebook
+                        </a>
+                    </p>
+                    <p>
+                        <strong>WhatsApp :</strong>{' '}
+                        <a
+                            href="https://wa.me/33123456789"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Envoyez-nous un message sur WhatsApp
+                        </a>
+                    </p>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

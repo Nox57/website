@@ -1,22 +1,13 @@
 /* Contact.css */
 
-.contactPage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
-    background-color: #f4f4f4;
-}
-
 .contactContainer {
-    width: 100%;
-    margin: 0 auto;
-    padding: 40px 20px;
-    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding: 2rem;
     background-color: #e6f0fa;
     color: #002855;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .contactContainer h1,
@@ -32,9 +23,17 @@
     margin-bottom: 20px;
 }
 
+.contactForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .contactForm form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Limite la largeur du formulaire */
 }
 
 .contactForm label {
@@ -78,6 +77,15 @@
 
 .directContact p strong {
     color: #001d3d;
+}
+
+.directContact a {
+    color: #004085;
+    text-decoration: none;
+}
+
+.directContact a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Styles */

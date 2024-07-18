@@ -33,7 +33,7 @@ const Header = () => {
             <header className={`header-container ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="logo-title">
                     <img src={logo} alt="Metz-Sud Informatique Logo" className="logo" />
-                    <h1 className="title">Metz-Sud Informatique</h1>
+                    <span className="title">Metz-Sud Informatique</span>
                 </div>
                 <nav>
                     <button className="menu-toggle" onClick={toggleMenu}>

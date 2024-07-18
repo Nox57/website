@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 // Components
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import ScrollToTop from './ScrollToTop.js'
 // Pages
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
@@ -17,6 +18,7 @@ import { Helmet } from 'react-helmet-async'
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <div className="app-container">
                 <Helmet>
                     <meta name="theme-color" content="#ffffff" />

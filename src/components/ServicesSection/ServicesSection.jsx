@@ -13,6 +13,18 @@ const ServicesSection = () => {
             image: 'https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         },
         {
+            title: 'Conseil et Vente de Pièces Informatiques',
+            description:
+                'Optimisez ou réparez votre système avec les meilleures pièces détachées du marché. Nous vous aidons à choisir les composants idéaux pour améliorer les performances de votre ordinateur. Profitez de notre expertise pour des conseils avisés et des recommandations personnalisées, et obtenez les pièces dont vous avez besoin à des prix compétitifs.',
+            image: 'https://images.pexels.com/photos/19012044/pexels-photo-19012044/free-photo-of-technologie-ordinateur-pc-predateur.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        },
+        {
+            title: "Montage d'Ordinateurs Personnalisés",
+            description:
+                "Créez l'ordinateur de vos rêves avec notre service de montage personnalisé. Que vous ayez besoin d'une machine puissante pour le gaming, la création multimédia ou des tâches professionnelles exigeantes, nous vous conseillons sur le choix des composants et assemblons votre PC sur mesure. Faites confiance à Metz-Sud Informatique pour un système parfaitement adapté à vos besoins.",
+            image: 'https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        },
+        {
             title: 'Optimisation et Installation de Windows',
             description:
                 "Tirez le meilleur parti de votre ordinateur avec notre service d'installation et de configuration de Windows. Metz-Sud Informatique vous guide à travers l’optimisation de votre système pour booster ses performances et sécuriser vos données. Profitez d’un démarrage plus rapide, d’une meilleure sécurité et d’une expérience utilisateur améliorée grâce à nos experts en technologie.",
@@ -41,18 +53,6 @@ const ServicesSection = () => {
             description:
                 'Bénéficiez d’une installation réseau professionnelle pour votre domicile ou votre entreprise. Nos experts assurent la mise en place et la configuration de réseaux fiables et sécurisés, adaptés à vos besoins spécifiques. Faites confiance à Metz-Sud Informatique pour une connectivité optimale.',
             image: 'https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        },
-        {
-            title: "Montage d'Ordinateurs Personnalisés",
-            description:
-                "Créez l'ordinateur de vos rêves avec notre service de montage personnalisé. Que vous ayez besoin d'une machine puissante pour le gaming, la création multimédia ou des tâches professionnelles exigeantes, nous vous conseillons sur le choix des composants et assemblons votre PC sur mesure. Faites confiance à Metz-Sud Informatique pour un système parfaitement adapté à vos besoins.",
-            image: 'https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        },
-        {
-            title: 'Conseil et Vente de Pièces Informatiques',
-            description:
-                'Optimisez ou réparez votre système avec les meilleures pièces détachées du marché. Nous vous aidons à choisir les composants idéaux pour améliorer les performances de votre ordinateur. Profitez de notre expertise pour des conseils avisés et des recommandations personnalisées, et obtenez les pièces dont vous avez besoin à des prix compétitifs.',
-            image: 'https://images.pexels.com/photos/19012044/pexels-photo-19012044/free-photo-of-technologie-ordinateur-pc-predateur.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         },
     ]
 

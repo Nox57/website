@@ -7,6 +7,13 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 #root {
@@ -31,6 +38,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px; /* Ajout de padding par défaut */
+    width: 100%;
 }
 
 a {
@@ -67,7 +75,7 @@ a:focus {
 
 @media (max-width: 576px) {
     .main-content {
-        padding: 0px; /* Réduire encore le padding pour les très petits écrans */
+        padding: 5px; /* Réduire encore le padding pour les très petits écrans */
         margin: 0; /* Supprimer les marges externes */
         max-width: 100%;
     }
